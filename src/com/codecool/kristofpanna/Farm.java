@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Farm {
-    int totalFoodProduced = 0;
+    private int totalFoodProduced = 0;
     private List<Plant> plants = new ArrayList<>();
 
     public Farm(int almonds, int junipers, int spruces) {
@@ -24,10 +24,19 @@ public class Farm {
         }
     }
 
+    public int getTotalFoodProduced() {
+        return totalFoodProduced;
+    }
+
     void advanceOneMonth() {
+        int actualFoodProduced = 0;
         for (Plant plant : plants) {
             plant.grow();
-            totalFoodProduced += plant.produce();
+            if (plant.isRotten()) {
+                return; // no production this month
+            }
+            actualFoodProduced += plant.produce();
         }
+        totalFoodProduced += actualFoodProduced;
     }
 }

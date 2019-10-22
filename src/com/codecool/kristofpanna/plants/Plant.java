@@ -6,16 +6,25 @@ public abstract class Plant {
     protected List<Trait> traits;
 
     // package-private -> Trait can modify these
-    int actualProduction;
-    int monthlyProduction;
+    boolean rotten = false;
+    int production;
+
+    private static final int defaultGrowth = 4;
+
+
+    public boolean isRotten() {
+        return rotten;
+    }
 
     public void grow() {
-        // TODO
+        for (Trait trait : traits) {
+            trait.process();
+        }
         System.out.println(this.getClass().getName() + " growing...");
     }
 
-    public int produce(){
-        return actualProduction;
+    public int produce() {
+        return production;
     }
 
 }

@@ -8,7 +8,7 @@ All plants *produce food* every month (Spruce-26 Almond-50, Juniper-14), which c
 
 Since Spruces and Junipers are evergreens, they can grow leaves on their own every 5 months, increasing their production by 8. These two can also be at max production at 70 (can't be more than that), at that point they speak and say "< Name > at full production!".
 
-*Almond trees, on the other hand, are very effective, when their production falls below 40, it is doubled! 
+Almond trees, on the other hand, are very effective, when their production falls below 40, it is doubled! 
 
 Both almond trees and spruces have special attributes: 
 * they can grow a shroom every month, which has a chance (almond: 8%, spruce: 5%) that boosts the production by (almond: 10, spruce: 15) of that plant. 
