@@ -17,3 +17,7 @@ Both almond trees and spruces have special attributes:
 Shroom growing always happens first! If any plant rots, no food is produced that month at all.
 
 What is the production total on the farm after 80 months?  
+
+--- 
+
+(My interpretation: every change in production lasts.)
