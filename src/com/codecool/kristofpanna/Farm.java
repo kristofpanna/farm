@@ -16,9 +16,11 @@ public class Farm {
         for (int i = 0; i < almonds; i++) {
             plants.add(new Almond());
         }
+
         for (int i = 0; i < junipers; i++) {
             plants.add(new Juniper());
         }
+
         for (int i = 0; i < spruces; i++) {
             plants.add(new Spruce());
         }
@@ -29,14 +31,21 @@ public class Farm {
     }
 
     public void advanceOneMonth() {
+        System.out.println("-----------------------");
+
         int actualFoodProduced = 0;
+        boolean anyRotten = false;
+
         for (Plant plant : plants) {
             plant.grow();
             if (plant.isRotten()) {
-                return; // no production this month
+                anyRotten = true;
             }
             actualFoodProduced += plant.produce();
         }
-        totalFoodProduced += actualFoodProduced;
+
+        if (!anyRotten) {
+            totalFoodProduced += actualFoodProduced;
+        }
     }
 }

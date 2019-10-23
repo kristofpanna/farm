@@ -7,4 +7,9 @@ public class Spruce extends Plant {
         traits.add(new ShroomGrower(this, 5, 15, 4, 20));
         traits.add(new Evergreen(this));
     }
+
+    @Override
+    public String toString() {
+        return "Spruce";
+    }
 }

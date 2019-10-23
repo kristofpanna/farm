@@ -6,4 +6,9 @@ public class Juniper extends Plant {
         production = 14;
         traits.add(new Evergreen(this));
     }
+
+    @Override
+    public String toString() {
+        return "Juniper";
+    }
 }

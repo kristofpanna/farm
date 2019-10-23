@@ -10,6 +10,7 @@ class MagicDoubler extends Trait {
     void process() {
         if (plant.production < 40) {
             plant.production = plant.production * 2;
+            System.out.println("Double Power!");
         }
     }
 }

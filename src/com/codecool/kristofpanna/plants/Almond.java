@@ -7,4 +7,9 @@ public class Almond extends Plant {
         traits.add(new ShroomGrower(this, 8, 10, 13, 18));
         traits.add(new MagicDoubler(this));
     }
+
+    @Override
+    public String toString() {
+        return "Almond";
+    }
 }

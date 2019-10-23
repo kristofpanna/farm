@@ -21,21 +21,22 @@ class ShroomGrower extends Trait {
 
     @Override
     void process() {
-        GrowShroom();
-        Rot();
+        growShroom();
+        rot();
     }
 
-    private void GrowShroom() {
+    private void growShroom() {
         if (Randomize.eventWithChanceInPercent(shroomBoostChancePercent)) {
             plant.production += shroomBoostAmount;
             System.out.println("Shrooom boost!");
         }
     }
 
-    private void Rot() {
+    private void rot() {
         if (Randomize.eventWithChanceInPercent(rotChancePercent)) {
             plant.production -= rotReduceAmount;
             plant.rotten = true;
+            System.out.println("Terrible smell...");
         } else {
             plant.rotten = false;
         }
