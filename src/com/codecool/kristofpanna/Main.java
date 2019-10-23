@@ -7,7 +7,7 @@ public class Main {
     }
 
     private static void advanceFarmForMonths(int months) {
-        Farm farm = new Farm(3,4,5);
+        Farm farm = new Farm(2,3,4);
         for (int time = 0; time < months; time++) {
             farm.advanceOneMonth();
         }

@@ -1,15 +1,14 @@
 package com.codecool.kristofpanna.plants;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Plant {
-    protected List<Trait> traits;
+    protected List<Trait> traits = new ArrayList<>();
 
     // package-private -> Trait can modify these
     boolean rotten = false;
     int production;
-
-    private static final int defaultGrowth = 4;
 
 
     public boolean isRotten() {
@@ -17,13 +16,15 @@ public abstract class Plant {
     }
 
     public void grow() {
+        final int DEFAULT_GROWTH = 4;
         for (Trait trait : traits) {
+            production += DEFAULT_GROWTH;
             trait.process();
         }
-        System.out.println(this.getClass().getName() + " growing...");
     }
 
     public int produce() {
+        System.out.println(this.toString() + " producing " + production);
         return production;
     }
 
