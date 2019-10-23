@@ -1,8 +1,8 @@
 package com.codecool.kristofpanna.plants;
 
-public class MagicDoubler extends Trait {
+class MagicDoubler extends Trait {
 
-    public MagicDoubler(Plant plant) {
+    MagicDoubler(Plant plant) {
         super(plant);
     }
 

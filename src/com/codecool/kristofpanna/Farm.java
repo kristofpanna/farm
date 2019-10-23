@@ -28,7 +28,7 @@ public class Farm {
         return totalFoodProduced;
     }
 
-    void advanceOneMonth() {
+    public void advanceOneMonth() {
         int actualFoodProduced = 0;
         for (Plant plant : plants) {
             plant.grow();
