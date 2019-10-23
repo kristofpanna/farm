@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class Plant {
     protected List<Trait> traits = new ArrayList<>();
 
-    // package-private -> Trait can modify these
+    // package-private -> Trait can read and modify these
     boolean rotten = false;
     int production;
 
